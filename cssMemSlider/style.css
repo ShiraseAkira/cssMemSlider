@@ -18,6 +18,7 @@ body {
   margin: auto;
   width: 80vmin;
   height: 55vmin;
+  overflow: hidden;
 }
 
 img {
@@ -31,16 +32,10 @@ img,
   display: none;
 }
 
-img,
-.caption {
-  transform: translateX(50px);
-  transition: transform 250ms ease-out, opacity 250ms ease-out;
-}
-
 input:checked + img,
 input:checked + img + .caption {
-  transform: translateX(0);
   display: block;
+  animation: slideIn 0.5s;
 }
 
 img {
@@ -95,6 +90,15 @@ input:checked + img + .caption + label:active {
   background: padding-box
     radial-gradient(rgb(37, 40, 42) 0, rgb(37, 40, 42) 48%, #aaa 52%, #aaa 100%)
     no-repeat;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @media screen and (max-width: 360px) {
