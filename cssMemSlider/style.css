@@ -1,0 +1,62 @@
+.cssMemSlider {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 500px;
+}
+
+input,
+.slide,
+.caption {
+  display: none;
+}
+
+input:checked + .slide,
+input:checked + .slide + .caption {
+  display: block;
+}
+
+.caption,
+label {
+  margin: 20px 0;
+}
+
+.caption {
+  flex: 1;
+}
+
+label {
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+/* some basic styling*/
+.slide1 {
+  background-color: red;
+}
+
+.slide2 {
+  background-color: green;
+}
+
+.slide3 {
+  background-color: blue;
+}
+
+.slide4 {
+  background-color: black;
+}
+
+.slide {
+  width: 500px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+input:checked + .slide + .caption + label {
+  color: red;
+}
