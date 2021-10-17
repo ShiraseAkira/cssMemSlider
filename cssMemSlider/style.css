@@ -1,8 +1,8 @@
 .cssMemSlider {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
-  width: 500px;
 }
 
 input,
@@ -22,7 +22,7 @@ label {
 }
 
 .caption {
-  flex: 1;
+  flex-grow: 1;
 }
 
 label {
@@ -34,7 +34,26 @@ label {
   height: 20px;
 }
 
+@media screen and (max-width: 360px) {
+  .caption {
+    order: 2;
+    width: 100%;
+    flex-shrink: 0;
+  }
+}
+
 /* some basic styling*/
+
+.cssMemSlider {
+  width: 500px;
+}
+
+@media screen and (max-width: 360px) {
+  .cssMemSlider {
+    width: 320px;
+  }
+}
+
 .slide1 {
   background-color: red;
 }
