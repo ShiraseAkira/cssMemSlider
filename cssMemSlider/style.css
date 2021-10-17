@@ -110,5 +110,6 @@ input:checked + img + .caption + label:active {
 
   .cssMemSlider {
     width: 100%;
+    height: auto;
   }
 }
